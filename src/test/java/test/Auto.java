@@ -20,9 +20,11 @@ public class Auto {
 		
 		if ( motor.registro == registro ) {
 			
-			for (int i = 0; i < asientos.length; i++){
-			    if (registro != asientos[i].registro)
-			    	integro = false;
+			if (asientos.length > 0) {
+				for (int i = 0; i < asientos.length; i++) {
+				    if (registro != asientos[i].registro)
+				    	integro = false;
+				}
 			}
 		
 		} else
