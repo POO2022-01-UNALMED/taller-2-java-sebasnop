@@ -11,14 +11,25 @@ public class Auto {
 	static int cantidadCreados;
 	
 	int cantidadAsientos() {
-		return asientos.length;
+		int c = asientos.length;
+		return c;
 	}
 	
 	String verificarIntegridad() {
 		
 		boolean integro = true;
 		
-		if ( motor.registro == registro ) {
+		if (motor.registro != registro)
+			integro = false;
+		
+		if (asientos.length > 0) {
+			for (int i = 0; i < asientos.length; i++) {
+			    if (registro != asientos[i].registro)
+			    	integro = false;
+			}
+		}
+		
+		/**if ( motor.registro == registro ) {
 			
 			if (asientos.length > 0) {
 				for (int i = 0; i < asientos.length; i++) {
@@ -28,7 +39,7 @@ public class Auto {
 			}
 		
 		} else
-			integro = false;
+			integro = false;**/
 		
 		if (integro)
 			return "Auto original";
