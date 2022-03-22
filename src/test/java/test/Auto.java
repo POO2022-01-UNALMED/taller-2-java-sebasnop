@@ -31,7 +31,7 @@ public class Auto {
 		
 		if (asientos.length > 0) {
 			for (int i = 0; i < asientos.length; i++) {
-			    if (registro != asientos[i].registro)
+			    if ( (registro != asientos[i].registro) && (asientos[i] != null) )
 			    	integro = false;
 			}
 		}
